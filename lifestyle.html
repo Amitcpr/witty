@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.header {
+  padding: 10px;
+  font-size: 40px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.side a{
+  text-decoration: none;
+  color: Black;
+}
+.side a:hover{
+  color:rgb(100,100,100);
+}
+.sside{
+  background-color: rgba(200,200,200,0.2);
+  padding: 20px;
+}
+.transform:hover{
+  transform: scale(1.05);
+}
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  background-color: rgba(0,0,0,0.6);
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+.quote{
+  color:rgb(100,100,100);
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 30px;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>LIFESTYLE</h1>
+</div>
+
+<div class="row">
+  <div class="side">
+    <div class="sside">
+      <h2 class="transform"><a href="#HEALTHY FRUITS">HEALTHY FRUITS</a></h2>
+      <img src="watermellon.jpg"style="width: 100%;">
+      <h3><a href="#fruits">Fruits that will help control your body temperature in this sweltering summer heat</a></h3>
+      <h5>Apr 24, 2019 20:12 IST</h5>
+    </div>
+    <br>
+    <br>
+    <div class="sside">
+      <h2 class="transform"><a href="#DOCTOR'S TIP">DOCTOR'S TIP </a></h2>
+      <img src="bloodpressure.jpg"style="width: 100%;">
+      <h3><a href="#bloodpressure">How to tell if you have high blood pressure or low blood pressure</a></h3>
+      <h5>Apr 24, 2019 10:59 IST</h5>
+    </div>
+    <br>
+    <br>
+    <div class="sside">
+      <h2 class="transform"><a href="HOMEMADE DRINKS">HOMEMADE DRINKS</a></h2>
+      <img src="images.jpg"style="width: 100%;">
+      <h3><a href="#HOMEMADE DRINKS">These home-made detox drinks will help deep cleanse your liver</a></h3>
+      <h5>Apr 21, 2019 22:38 IST</h5>
+    </div>
+  </div>
+  <div class="main">
+    <h2>FASHION</h2>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="Priyanka-Chopra-1.png" style="width:100%">
+        <div class="text">‘Looks aren’t everything’, says Priyanka Chopra Jonas as she wins Beauty of the Year Award</div>
+      </div>
+
+<div class="mySlides fade">
+        <img src="neha-dupia-620x330.jpg" style="width:100%">
+        <div class="text">Neha Dhupia disappoints in this Payal Khandwala ensemble; see pics</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="_73e3d82c-3d54-11e8-80b2-0257d29a997a.jpg" style="width:100%">
+        <div class="text">Student of the Year 2 promotions: Ananya Panday gives major style goals in these chic outfits</div>
+      </div>
+
+      <div class="mySlides fade">
+       <img src="yellow-bollywood-fashion-759-620x330.jpg" style="width:100%">
+       <div class="text">Sonam Kapoor, Kareena Kapoor and Kiara Advani wow in shades of yellow</div>
+      </div>
+
+<div class="mySlides fade">
+       <img src="ksuarrow_tattoo_50252772_249839769097085_5789284127159583050_n.jpg" style="width:100%">
+       <div class="text">Have you heard of embroidery tattoo? Well, just like armpit tattoo, it is a thing now</div>
+      </div>
+
+    </div>
+    <br>
+    <div class="quote">"I promote a healthy lifestyle."
+      <p style="text-align: right;padding-right: 150px;">-Kim Kardashian</p></div>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 4000);
+}
+</script>
+
+</body>
+</html>

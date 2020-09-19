@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>bollywood news</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.header {
+  padding: 10px;
+  font-size: 40px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.side a{
+  text-decoration: none;
+  color: Black;
+}
+.side a:hover{
+  color:rgb(100,100,100);
+}
+.sside{
+  background-color: rgba(200,200,200,0.2);
+  padding: 20px;
+}
+.transform:hover{
+  transform: scale(1.05);
+}
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  background-color: rgba(0,0,0,0.6);
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+.quote{
+  color:rgb(100,100,100);
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 30px;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>BOLLYWOOD</h1>
+</div>
+
+<div class="row">
+  <div class="side">
+    <div class="sside">
+      <h2 class="transform"><a href="#Bollywood">Bollywood News</a></h2>
+      <img src="sunny.jpg"style="width: 100%;">
+      <h3><a href="#rcb">Lok Sabha polls 2019: Bollywood actor Sunny Deol joins BJP</a></h3>
+      <h5>Apr 24, 2019 20:12 IST</h5>
+    </div>
+    <br>
+    <br>
+    <div class="sside">
+      <h2 class="transform"><a href="#Trending">Trending News</a></h2>
+      <img src="bharat'.jpg"style="width: 100%;">
+      <h3><a href="#Bharat">‘Bharat’ trailer: The Salman Khan and Katrina Kaif starrer will leave you spell-bound</a></h3>
+      <h5>Apr 24, 2019 10:59 IST</h5>
+    </div>
+    <br>
+    <br>
+    <div class="sside">
+      <h2 class="transform"><a href="#Bollywood">Bollywood News</a></h2>
+      <img src="modibjp.jpg"style="width: 100%;">
+      <h3><a href="#modi">PM Narendra Modi speaks to Akshay Kumar on love for mangoes, family life, retirement plans and more</a></h3>
+      <h5>Apr 21, 2019 22:38 IST</h5>
+    </div>
+  </div>
+  <div class="main">
+    <h2>Bollywood News</h2>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="bharat'.jpg" style="width:100%">
+        <div class="text">‘Bharat’ trailer: The Salman Khan and Katrina Kaif starrer will leave you spell-bound</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="sunny.jpg" style="width:100%">
+        <div class="text">Lok Sabha polls 2019: Bollywood actor Sunny Deol joins BJP</div>
+      </div>
+
+      <div class="mySlides fade">
+       <img src="modibjp.jpg" style="width:100%">
+       <div class="text">PM Narendra Modi speaks to Akshay Kumar on love for mangoes, family life, retirement plans and more</div>
+      </div>
+
+    </div>
+    <br>
+    <div class="quote">"Bollywood has always pampered heroes and treated actors as second class citizens. But, of late, it has realised that there has to be space for actors who can connect with people."
+      <p style="text-align: right;padding-right: 150px;">-Nawazuddin Siddiqui</p></div>
+</div>
+<h3><a href="homepage.html">home</h3>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 5000);
+}
+</script>
+
+</body>
+</html>
